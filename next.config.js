@@ -2,18 +2,17 @@
 module.exports = {
   reactStrictMode: true,
   basePath: '/base',
-  async redirects() {
-    return {
-      source: '/',
-      destination: '/base',
-    };
-  },
   i18n: {
     defaultLocale: 'de',
+    locales: ['de', 'en'],
     domains: [
       {
         domain: 'vercel-next-js-iuqchb--3000.local.webcontainer.io',
-        locales: ['de'],
+        defaultLocale: 'de',
+      },
+      {
+        domain: 'en.vercel-next-js-iuqchb--3000.local.webcontainer.io',
+        defaultLocale: 'en',
       },
     ],
   },
